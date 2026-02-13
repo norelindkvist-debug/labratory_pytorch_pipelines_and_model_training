@@ -1,11 +1,17 @@
 import torch.nn as nn
+from utils import Device
 
-input_size = 1024
-output_size = 10 
-hidden_layers = 128
+device = Device()
 
-model = nn.Sequential(
-    nn.Linear(input_size, hidden_layers),
-    nn.ReLU(),
-    nn.Linear(hidden_layers, output_size)
-)
+print(f"Using device: {device}")
+
+class SimpleClassifier(nn.Module):
+    def __init__(self):
+        super().__init__()
+
+        self.model = nn.Sequential(nn.Linear(3072, 128), nn.ReLU(), nn.Linear(128, 10))
+
+    def forward(self, x):
+        x = x.view(x.size(0), -1)  # flatten image
+
+        return self.model(x)
