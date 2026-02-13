@@ -1,5 +1,11 @@
+from src.datasets import get_dataloaders
+
+
 def main():
-    print("Hello from labratory-pytorch-pipelines-and-model-training!")
+    train_loader, test_loader = get_dataloaders()
+
+    images, labels = next(iter(train_loader))
+    print("Image shape:", images.shape)
 
 
 if __name__ == "__main__":
