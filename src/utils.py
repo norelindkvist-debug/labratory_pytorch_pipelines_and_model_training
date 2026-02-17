@@ -8,4 +8,4 @@ def Device():
     if torch.backends.mps.is_available()
     else "cpu"
 )
-    return device
+    return torch.device(device)
