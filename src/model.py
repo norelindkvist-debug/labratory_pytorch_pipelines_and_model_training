@@ -1,9 +1,4 @@
 import torch.nn as nn
-from utils import Device
-
-device = Device()
-
-print(f"Using device: {device}")
 
 class SimpleClassifier(nn.Module):
     def __init__(self):
