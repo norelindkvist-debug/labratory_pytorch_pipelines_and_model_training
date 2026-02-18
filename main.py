@@ -1,5 +1,5 @@
 from src.train import train_model
-from src.logger import append_result_md
+from src.experiment_logger import append_result_md
 
 def main():
     experiments = [
