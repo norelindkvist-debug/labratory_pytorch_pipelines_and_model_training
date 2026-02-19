@@ -3,9 +3,9 @@ from src.experiment_logger import append_result_md
 
 def main():
     experiments = [
-        ("lr_1e-3", {"lr": 1e-3, "batch_size": 64, "epochs": 10}),
-        ("lr_5e-4", {"lr": 5e-4, "batch_size": 64, "epochs": 10}),
-        ("lr_1e-4", {"lr": 1e-4, "batch_size": 64, "epochs": 10}),
+        ("1/3", {"lr": 1e-3, "batch_size": 64, "epochs": 10}),
+        ("2/3", {"lr": 5e-4, "batch_size": 64, "epochs": 10}),
+        ("3/3", {"lr": 1e-4, "batch_size": 64, "epochs": 10}),
     ]
 
     for name, cfg in experiments:

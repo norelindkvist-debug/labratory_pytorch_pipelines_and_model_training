@@ -1,4 +1,5 @@
 import torch
+from pathlib import Path
 
 def Device():
     device = (
@@ -9,3 +10,5 @@ def Device():
     else "cpu"
 )
     return torch.device(device)
+
+DATA_PATH = Path(__file__).parent / "data"
